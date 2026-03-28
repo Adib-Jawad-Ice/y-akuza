@@ -1,0 +1,98 @@
+/* ── Y-akuza v5 — Supplemental Style ────────────────────────────────────
+   Pairs with content.js STATIC_CSS. Only covers what the JS block does not:
+   font, scrollbar, search bar, player accents, sidebar, dropdowns.
+   Do NOT duplicate STATIC_CSS rules here — double !important recalcs hurt
+   performance on every style invalidation.
+ ──────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --yak-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --yak-red:  #E50914;
+}
+
+/* ── Font: override YouTube's internal CSS variables ── */
+html, body, [dark], ytd-app {
+  --yt-spec-font-family: var(--yak-font) !important;
+  --yt-sans-font-family: var(--yak-font) !important;
+}
+* { font-family: var(--yak-font) !important }
+
+/* ── Slim scrollbar ── */
+::-webkit-scrollbar             { width:5px; height:5px }
+::-webkit-scrollbar-track       { background:#0a0a0c }
+::-webkit-scrollbar-thumb       { background:#2e2e3a; border-radius:3px }
+::-webkit-scrollbar-thumb:hover { background:#4a4a5a }
+
+/* ── Search bar ── */
+ytd-searchbox #search-input,
+ytd-searchbox input {
+  background:#16161e !important;
+  border:1px solid rgba(255,255,255,0.09) !important;
+  border-right:none !important;
+  border-radius:4px 0 0 4px !important;
+  color:#fff !important;
+  caret-color:var(--yak-red) !important;
+}
+#search-icon-legacy {
+  background:#1e1e28 !important;
+  border:1px solid rgba(255,255,255,0.09) !important;
+  border-left:none !important;
+  border-radius:0 4px 4px 0 !important;
+}
+
+/* ── Player: red progress & scrubber ── */
+.ytp-play-progress,
+.ytp-swatch-background-color { background:var(--yak-red) !important }
+.ytp-load-progress            { background:rgba(229,9,20,0.32) !important }
+
+/* Resume-progress bar on thumbnails */
+ytd-thumbnail-overlay-resume-playback-renderer #progress {
+  background:var(--yak-red) !important;
+}
+
+/* ── Duration badge ── */
+ytd-thumbnail-overlay-time-status-renderer {
+  background:rgba(0,0,0,0.82) !important;
+  border-radius:4px !important;
+  font-weight:700 !important;
+  letter-spacing:0.03em !important;
+}
+
+/* ── Subscribe button → red (visible when hideMeta is off) ── */
+ytd-subscribe-button-renderer tp-yt-paper-button,
+ytd-subscribe-button-renderer yt-button-shape button {
+  background:var(--yak-red) !important;
+  color:#fff !important;
+  border-radius:4px !important;
+  font-weight:700 !important;
+  text-transform:uppercase !important;
+  letter-spacing:0.06em !important;
+  border:none !important;
+}
+
+/* ── Guide sidebar: red active stripe ── */
+ytd-guide-entry-renderer[aria-selected="true"] {
+  border-left:3px solid var(--yak-red) !important;
+}
+ytd-guide-entry-renderer[aria-selected="true"] .title,
+ytd-guide-entry-renderer:hover .title {
+  color:#fff !important;
+}
+
+/* ── Dropdown / context menus ── */
+tp-yt-iron-dropdown .iron-dropdown-scroll,
+ytd-multi-page-menu-renderer {
+  background:#14141c !important;
+  border:1px solid rgba(255,255,255,0.07) !important;
+  border-radius:8px !important;
+  box-shadow:0 14px 48px rgba(0,0,0,0.8) !important;
+}
+
+/* ── Watch page: video title (visible when hideMeta is off) ── */
+ytd-watch-metadata h1 yt-formatted-string {
+  font-size:1.35rem !important;
+  font-weight:700 !important;
+  letter-spacing:-0.02em !important;
+  line-height:1.4 !important;
+  color:#fff !important;
+}

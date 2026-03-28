@@ -1,0 +1,21 @@
+[
+  { "id":  1, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/notification*",   "resourceTypes": ["xmlhttprequest"] } },
+  { "id":  2, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/log_event*",      "resourceTypes": ["xmlhttprequest"] } },
+  { "id":  3, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/feedback*",       "resourceTypes": ["xmlhttprequest"] } },
+  { "id":  4, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/get_survey*",     "resourceTypes": ["xmlhttprequest"] } },
+  { "id":  5, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/api/stats/atr*",              "resourceTypes": ["xmlhttprequest", "ping"] } },
+  { "id":  6, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/api/stats/qoe*",              "resourceTypes": ["xmlhttprequest", "ping"] } },
+  { "id":  7, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/att*",            "resourceTypes": ["xmlhttprequest"] } },
+  { "id":  8, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/generate_204*",               "resourceTypes": ["ping", "xmlhttprequest", "other"] } },
+  { "id":  9, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/account_menu*",   "resourceTypes": ["xmlhttprequest"] } },
+  { "id": 10, "priority": 2, "action": { "type": "block" }, "condition": { "requestDomains": ["doubleclick.net"],        "resourceTypes": ["script", "xmlhttprequest", "image", "ping", "other"] } },
+  { "id": 11, "priority": 2, "action": { "type": "block" }, "condition": { "requestDomains": ["googlesyndication.com"], "resourceTypes": ["script", "xmlhttprequest", "image", "ping", "other"] } },
+  { "id": 12, "priority": 2, "action": { "type": "block" }, "condition": { "requestDomains": ["googleadservices.com"],  "resourceTypes": ["script", "xmlhttprequest", "ping"] } },
+  { "id": 13, "priority": 2, "action": { "type": "block" }, "condition": { "requestDomains": ["googletagmanager.com"],  "resourceTypes": ["script", "xmlhttprequest"] } },
+  { "id": 14, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/api/stats/ads*",              "resourceTypes": ["xmlhttprequest", "ping"] } },
+  { "id": 15, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/ptracking*",                  "resourceTypes": ["xmlhttprequest", "ping", "image"] } },
+  { "id": 16, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/api/stats/playback*",         "resourceTypes": ["xmlhttprequest", "ping"] } },
+  { "id": 17, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/log_interaction*","resourceTypes": ["xmlhttprequest"] } },
+  { "id": 18, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/youtubei/v1/set_setting*",    "resourceTypes": ["xmlhttprequest"] } },
+  { "id": 19, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*/beacon*",                    "resourceTypes": ["ping", "xmlhttprequest"] } }
+]
