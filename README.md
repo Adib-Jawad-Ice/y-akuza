@@ -30,4 +30,4 @@ Unlike other "hiders," Y-akuza prioritizes speed by stopping the bloat before it
 4. Click **Load unpacked** and select the folder containing these files.
 
 ## 📜 License
-MIT © [Your Name]
+MIT © Adib Jawad
